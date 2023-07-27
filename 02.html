@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <title>GSAP</title>
+
+  <style>
+    /*.selector {*/
+    /*    width: 100px;*/
+    /*    height: 100px;*/
+    /*    background: #88CE02;*/
+    /*    margin: 3px;*/
+
+    /*    display: flex;*/
+    /*    align-items: center;*/
+    /*    justify-content: center;*/
+    /*}*/
+  </style>
+
+</head>
+<body>
+  <div class="selector">GSAP</div>
+<!--  <div class="selector">GSAP</div>-->
+<!--  <div class="selector">GSAP</div>-->
+<!--  <div class="selector">GSAP</div>-->
+<!--  <div class="selector">GSAP</div>-->
+<!--  <div class="selector">GSAP</div>-->
+<!--  <div class="selector">GSAP</div>-->
+
+  <script>
+    const showMyObj = (selector, obj) => {
+      const el = document.querySelector(selector)
+      el.innerHTML = JSON.stringify({
+        subscriber: obj.subscriber,
+        sponsors: obj.sponsors,
+        delta: obj.delta,
+        mycolor: obj.mycolor,
+      }, null, '  ')
+    }
+
+    const myObj = {
+      subscriber: 6000,
+      sponsors: 3,
+      delta: .5,
+      mycolor: '#123456',
+    }
+
+    gsap.to(myObj, {
+      subscriber: 100000,
+      sponsors: 200,
+      delta: 6.7,
+      mycolor: '#987655',
+      duration: 10,
+      delay: 2,
+      onUpdate: () => {
+        showMyObj('.selector', myObj)
+      }
+    })
+  </script>
+</body>
+</html>
