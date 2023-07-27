@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <title>GSAP</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    #box {
+        position: absolute;
+        width: 750px;
+        height: 300px;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        /*border: 4px dashed #777;*/
+    }
+
+    .selectors {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2px;
+    }
+
+    .selector {
+        width: 10px;
+        height: 10px;
+        background: rgb(136, 206, 2);
+        opacity: .5;
+        transform: scale(2) translateY(300px);
+    }
+
+    h1, footer {
+        font-size: 5rem;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 25px;
+        transform: scale(2) translateX(-1000px);
+    }
+
+    footer {
+        transform: scale(1.5) translateX(1000px);
+    }
+
+  </style>
+
+</head>
+<body>
+
+
+<div id="box">
+  <h1>Привет, мир!</h1>
+
+  <div class="selectors">
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+    <div class="selector"></div>
+  </div>
+
+  <footer>Hello, world!</footer>
+</div>
+
+  <script>
+    const tl = gsap.timeline({ repeat: 0, repeatDelay: 1 })
+
+    tl
+      .to('h1', {
+      x: 0,
+      ease: 'bounce',
+      duration: 2
+      })
+      .to('footer', {
+        x: 0,
+        ease: 'bounce',
+        duration: 2
+      }, '-=1')
+      .to('.selector', {
+        y: 0,
+        scale: 1,
+        ease: 'bounce',
+        stagger: .05
+      }, '-=3')
+      .to('h1', {
+        color: '#ccfc8c'
+      }, '+=1')
+      .to('footer', {
+        rotation: -10
+      }, '-=1')
+
+  </script>
+</body>
+</html>
