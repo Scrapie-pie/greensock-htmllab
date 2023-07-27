@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <title>GSAP</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+    #box {
+        display: flex;
+        flex-wrap: wrap;
+        width: 1400px;
+        margin: auto;
+        gap: 2px;
+    }
+    .selector {
+        width: 40px;
+        height: 40px;
+        background: rgb(136, 206, 2);
+    }
+  </style>
+
+</head>
+<body>
+
+<button onclick="tween.play()">Старт</button>
+<button onclick="tween.pause()">Пауза</button>
+<button onclick="tween.resume()">Возобновить</button>
+<button onclick="tween.reverse()">Обратное движение</button>
+<button onclick="tween.restart()">Заново</button>
+<input type="range" min="0" max="100" value="0" oninput="tween.progress(this.value / 100)"/>
+
+<div id="box">
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+  <div class="selector"></div>
+</div>
+
+  <script>
+    // gsap.to('.selector', {
+    //   duration: 2,
+    //   //x: 50,
+    //   y: 200,
+    //   background: 'orange',
+    //   opacity: .8,
+    //   // delay: (i) => {
+    //   //   return i * .5
+    //   // }
+    //   stagger: {
+    //     each: .5,
+    //     from: 'center',
+    //     repeat: 3,
+    //     yoyo: true
+    //   },
+    //   //repeat: -1,
+    // })
+
+    const tween = gsap.to('.selector', {
+      duration: 1,
+      background: 'orange',
+      scale: .1,
+      paused: true,
+      stagger: {
+        each: .1,
+        grid: 'auto',
+        from: 'center',
+        axis: 'y'
+      },
+      onComplete: () => {
+        console.log('Completed')
+      },
+      onRepeat: () => {
+        console.log('Repeat')
+      },
+      onReverseComplete: () => {
+        console.log('ReverseCompleted')
+      },
+      onStart: () => {
+        console.log('Start')
+      },
+      onUpdate: () => {
+        console.log('Updated')
+      },
+    })
+  </script>
+</body>
+</html>
