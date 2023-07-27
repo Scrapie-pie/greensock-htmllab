@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <title>GSAP</title>
+
+  <style>
+    .selector {
+        width: 100px;
+        height: 100px;
+        background: #88CE02;
+        margin: 3px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="selector">GSAP</div>
+  <div class="selector">GSAP</div>
+  <div class="selector">GSAP</div>
+  <div class="selector">GSAP</div>
+  <div class="selector">GSAP</div>
+  <div class="selector">GSAP</div>
+  <div class="selector">GSAP</div>
+
+  <script>
+    gsap.to('.selector', {
+      x: 100,
+      y: 100,
+      background: 'orange',
+      color: 'white',
+      duration: 1,
+      delay: .5,
+      repeat: 5,
+      repeatDelay: 1,
+      stagger: .25,
+      ease: 'power2.inOut',
+      //paused: true,
+      onCompleted: () => {
+        console.log('Готово!')
+      }
+    })
+  </script>
+</body>
+</html>
