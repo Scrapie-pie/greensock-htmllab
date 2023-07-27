@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <title>GSAP</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+    h1 {
+      font-size: 4rem;
+      color: orange;
+      opacity: .5;
+    }
+    .letter {
+        opacity: .5;
+    }
+  </style>
+
+</head>
+<body>
+  <h1>Привет, GSAP</h1>
+
+
+  <script>
+    const h1 = document.querySelector('h1')
+    const letters = h1.innerHTML.split('');
+
+    h1.innerHTML = '';
+    h1.style.opacity = 1;
+
+    const spanArray = letters.map(letter => {
+      const item = document.createElement('span')
+      item.classList.add('letter')
+      item.innerHTML = letter;
+      h1.appendChild(item)
+
+      const rect = item.getBoundingClientRect()
+      console.log(rect)
+
+      item.style.left = rect.left + 'px'
+      item.x = rect.left
+      item.style.top = rect.top + 'px'
+      item.y = rect.top
+
+      return item
+    })
+
+    spanArray.forEach((span) => {
+      span.style.position = 'absolute'
+    })
+
+    setTimeout(() => {
+      gsap.to('.letter', {
+        duration: .5,
+        opacity: 1,
+        color: `rgb(136, 206, 2)`,
+        top: 100,
+        delay: (i, el) => {
+          return i * .25;
+        },
+        left: (i, el) => {
+          return el.x + i * 10;
+        }
+      })
+    }, 500)
+
+  </script>
+</body>
+</html>
